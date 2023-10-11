@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--
+    Title: Introduction to Vue.js
+    Author: Isaias M. Ghebrehiwet
+    Date: 10/11/2023
+
+    Filename: index.html
+  -->
+  <head>
+    <meta charset="utf-8">
+    <title>Intro to Vue3</title>
+    <!-- Import Styles -->
+    <link rel="stylesheet" type="text/css" href="./assets/styles.css">
+    <!-- Import Vue.js -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="nav-bar"></div>
+
+      <div class="cart">Cart({{ cart.length }})</div>
+
+      <product-display :premium="premium" @add-to-cart="updateCart"></product-display>
+    </div>
+    <!-- Import App -->
+    <script src="./main.js"></script>
+
+    <!-- Import Components -->
+    <script src="./components/ProductDisplay.js"></script>
+    <script src="./components/ReviewForm.js"></script>
+    <script src="./components/ReviewList.js"></script>
+
+    <!-- Mount App -->
+    <script>
+      const mountedApp = app.mount('#app')
+    </script>
+  </body>
+</html>
